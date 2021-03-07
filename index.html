@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome to WVSU</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <style>
+            * {
+                font-family: Poppins, sans-serif;
+                color: gray;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 2px;
+                background-color:white;
+            }
+          
+            .grid-container > div {
+                background-color: darkgray;
+                font-size: 30px;
+            }
+          
+            header { 
+                grid-area: 1 / span 3 / 1 / 4;
+                background-color: hsl(174, 70%, 54%);
+                box-shadow: 2px 2px 15px gray;
+                border-radius: 50px;
+                padding: 0 50px;
+                padding-top: 20px;
+                display: flex;
+                justify-content: left;
+
+            }
+
+            header h1 {
+                font-size: 34px;
+                color: white;
+                text-align: center;
+            }
+
+            nav { 
+                grid-area: 1 / span 3 / 1 / 4;
+                background-color: transparent;
+                padding-right: 50px;
+               }
+            
+            nav ul {
+                display: flex;
+                justify-content: right;
+                list-style: none;
+                text-decoration: none;
+            }
+            nav li {
+                padding: 1px 40px;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+                text-shadow: 2px 2px 15px hsl(177, 70%, 41%);
+            }
+            main { 
+                grid-area: 3 / span 3 / 3 / 4; 
+                background-color: white;
+            }
+
+            .container2 {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 2px;
+                
+            }
+            .container2 h2 {
+                padding-left: 40px;
+                padding-top: 10px;
+                color: hsl(174, 70%, 54%);
+            }
+                /**/
+                .announcements {
+                    background-color: hsl(0, 0%, 82%)	;
+                    grid-area: 1 / span 3 / 1 / 4;
+                    padding: 0 30px;
+                    padding-top: 40px;
+                    font-size: 12px;
+                    margin-left: 120px;
+                    margin-top: 20px;
+                    box-shadow: 2px 2px 15px gray;
+                    border-radius: 50px;
+                }
+                .announcements h3 {
+                    padding: 10px 30px;
+                }
+                .announcements img {
+                    max-width: 100%;
+                }
+                .announcements p {
+                    padding: 0 30px;
+                    font-size: 12px;
+                }
+
+                /**/
+                .news {
+                    background-color: hsl(0, 0%, 82%);
+                    grid-area: 2 / 1 / 2 / 4;
+                    padding: 0 30px;
+                    font-size: 12px;
+                    margin-left: 120px;
+                    margin-top: 20px;
+                    box-shadow: 2px 2px 15px gray;
+                    border-radius: 50px;
+                }
+                .news h3 {
+                    padding: 0 30px;
+                }
+                .news p {
+                    padding: 0 30px;
+                    font-size: 12px;
+                }
+                .news ul {
+                    padding: 0 80px;
+                    font-size: 12px;
+                }
+                /**/
+                .events {
+                    background-color: hsl(0, 0%, 82%);
+                    grid-area: span 4 / 4 / 3 / 4;
+                    font-size: 12px;
+                    margin-top: 20px;
+                    box-shadow: 2px 2px 15px gray;
+                    border-radius: 50px;
+                    margin-left: 20px;
+                    margin-right: 150px;
+
+                }
+                
+                .events h3, p {
+                    padding: 0 20px;
+                }
+                .events img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 5px solid cyan;
+                }
+                /**/
+                .vision {
+                    background-color: hsl(0, 0%, 82%);
+                    grid-area: 3 / 1 / 3 / 4;
+                    padding: 0 30px;
+                    font-size: 12px;
+                    margin-left: 120px;
+                    margin-top: 20px;
+                    box-shadow: 2px 2px 15px gray;
+                    border-radius: 50px;
+                }
+                .vision h3 {
+                    padding: 0 30px;
+                }
+                .vision p {
+                    padding: 0 30px;
+                    font-size: 12px;
+                }
+
+            footer { 
+                grid-area: 4 / 1 / 4 / 4;
+                background-color: hsl(174, 70%, 54%);
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                border-radius: 50px;
+            }
+          
+            
+          @media only screen and (max-width: 800px) {
+            header { 
+                grid-area: 1 / span 3 / 1 / 4; 
+                justify-content: center;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+            
+            nav { 
+                grid-area: 1 / span 3 / 1 / 4; 
+                justify-content: right;
+                align-items: right;
+            }
+
+            nav li {
+                font-size: 11px;
+                padding: 1px 14px;
+                list-style: none;
+            }
+            nav a {
+                border: 2px solid hsl(174, 70%, 54%);
+                background-color: hsl(174, 70%, 54%);
+                border-radius: 20px;
+                padding: 2px;
+            }
+            nav a:hover {
+                color:hsl(174, 70%, 54%);
+                border: 2px solid white;
+                background-color: white;
+                border-radius: 10px;
+                padding: 2px;
+            }
+
+            main { 
+                grid-area: 3 / span 3 / 3 / 4;
+                
+            }
+                /*media announcements*/
+                .announcements {
+                    background-color: hsl(0, 0%, 82%);
+                    grid-area: 1 / 1 / 1 / 1;
+                    padding: 0 15px;
+                    font-size: 11px;
+                    margin-left: 0;
+                    padding-top: 40px;
+                }
+                .announcements h3 {
+                    padding: 0 10px;
+                }
+                .announcements p {
+                    padding: 0 10px;
+                }
+
+                /*media news*/
+                .news {
+                    background-color: hsl(0, 0%, 82%);
+                    grid-area: 2 / 1 / 2 / 1;
+                    padding: 20px 15px;
+                    font-size: 11px;
+                    margin-left: 0;
+                }
+                .news h3 {
+                    padding: 0 5px;
+                }
+                .news p {
+                    padding: 0 10px;
+                }
+
+                /*media events*/
+                .events {
+                    background-color: hsl(0, 0%, 82%);
+                    background-image: no-repeat;
+                    grid-area: 3 / 1 / 3 / 1;
+                    padding: 20px 15px;
+                    font-size: 11px;
+                    margin: 0;
+                    margin-top: 20px;
+                }
+
+                /*media vision*/
+                .vision {
+                    background-color: hsl(0, 0%, 82%);
+                    grid-area: 4 / 1 / 4 / 1;
+                    padding: 20px 15px;
+                    font-size: 11px;
+                    margin-left: 0;
+                }
+                .vision h3 {
+                    padding: 0 10px;
+                }
+                .vision p {
+                    padding: 0 5px;
+                }
+                
+
+            footer {
+                color: white;
+                font-size: 11px;
+                grid-area: 4 / 1 / 4 / 4; 
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+            }
+            /*
+            .item5 { grid-area: 3 / 1 / 4 / 2; }
+            .item6 { grid-area: 2 / 3 / 3 / 4; }*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+          <header>
+              <h1>West Visayas State University</h1>
+          </header>
+          <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+          </nav>
+          
+          <main>
+                <div class="container2">
+                        <section class="announcements">
+                                <a href="#"><img src="wvsu.jpg"></a>
+                                <h3>WVSU Online Ticketing System</h3>
+                                <p>NEWS UPDATE: Due to COVID-19 pandemic, WVSU launches online appointment system. As a change in systems operation due to the coronavirus disease</p>
+                            <br>
+                        </section>
+                        <section class="news">
+                            <h2>Featured News</h2>
+                            <h3>WVSU-LC acknowledged as a Mikrotik Certified</h3>
+                            <p>WVSU-Lambunao Campus is now recognized as one of the MikroTik Academies in the Philippines, making it qualified to offer the internationally recognized Mikrotik Certified Network Associate (MTCNA) certification for free. <br>
+                                <br>
+                                MikroTik is a Latvian network equipment manufacturer. The company develops wired and wireless network routers, network switches, access points, as well as operating systems and auxiliary software (Mikrotik.com)<br>
+                                <br>
+                                Through its MikroTik RouterOS Academic Study Program for Higher Educational Institutions, MikroTik is offering academic institutions the opportunity to organize Networking classes using RouterOS as a learning tool.<br>
+                                <br>
+                                The program is open to universities, technical schools, colleges, vocational schools, and other institutions that grant academic degrees in a variety of subjects.<br>
+                                <br>
+                                Along with the recognition, WVSU-LC will also receive routers for laboratory and training equipment for free.<br>
+                                <br>
+                                Mrs. Jojo C. Garanganao, MSCS of School of Information & Communications Technology (SICT), Prof. Ma. Grace Rona L. Leal, Professor of SICT and Mr. Romer P. Pedroso, faculty of SICT attended the six (6)-day training.<br>
+                                <br>
+                                The WVSU-Lambunao Campus delegates passed the following exams, making them certified trainer of Mikrotik: <br> 
+                                <ul>
+                                    <li>MikroTik Certified Network Associate (MTCNA)</li>
+                                    <li>MikroTik Certified User Management Engineer (MTCUME)</li>
+                                    <li>MikroTik Certified Routing Engineer (MTCRE)</li>
+                                </ul>
+                            </p>
+
+                            <p>The training was held at the WVSU-Himamaylan Campus from January 26 to February 1, 2020.<br>
+                            </p>
+                            <br>
+                        </section>
+                        <section class="events">
+                            <h2>Upcoming Events</h2>
+                                <a href="#"><img src="events.jpg"></a>
+                            <br>
+                            <h2>Announcements</h2>
+                                <a href="#"><h3>WVSU College Admission Test 2020 Released!</h3>
+                                <p>The WVSUCAT 2020 results (for AY 2020-2021) are now posted at strategic locations in the University. Results are also accessible in this link. Listed are applicants ELIGIBLE for the next stage of admission process.</p></a>
+                                <br>
+                                <a href="#"><h3>APPLICANTS FOR WVSU-SHS (GRADE 11) ARE INVITED FOR INTERVIEW </h3>
+                                <p>THE FOLLOWING APPLICANTS FOR WVSU-SHS (GRADE 11) ARE INVITED FOR INTERVIEW: *Note: An invitation for interview DOES NOT AUTOMATICALLY GUARANTEE ACCEPTANCE to the WVSU Senior High School. (Click on the link to see list of applicants) </p></a>
+                                <br>
+                                <a href="#"><img src="library.png"></a><br>
+                                <p>Library Online is available now!</p>
+                                <br>
+                        </section>
+                        <section class="vision">
+                            <h2>Vision, Mission and Core Values</h2>
+                            <h3>Vision</h3>
+                            <p>WVSU as the center for educational excellence in the Visayas and the hub for Human Resources Development in the Asia-Pacific region.</p><br>
+                            <h3>Mission</h3>
+                            <p>WVSU is committed to provide holistic education geared toward sustainable growth and development.</p><br>
+                            <h3>Core Values</h3>
+                            <p><span style="word-spacing: 20px;">Scholarship  	 Harmony  	Innovation  	Nurturance  	Excellence  	Service</span></p><br>
+                            
+                        </section>
+                </div>
+          </main>
+          
+          <footer>Andario 2020</footer>
+          <!--
+          <div class="item5">5</div>
+          <div class="item6">6</div>-->
+        </div>
+    </body>
+</html>
